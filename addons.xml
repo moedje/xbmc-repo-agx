@@ -2,20 +2,20 @@
 <addons>
 <addon id="repository.xbmc-repo-agx" name="agx's XBMC Repo" version="1.0.0" provider-name="xbmc-repo-agx">
         <extension point="xbmc.addon.repository" name="agx's XBMC Repo">
-                <info compressed="false">http://xbmc-repo-agx.googlecode.com/git/trunk/addons.xml</info>
-                <checksum>http://xbmc-adult.googlecode.com/svn/trunk/addons.xml.md5</checksum>
-                <datadir zip="false">http://xbmc-adult.googlecode.com/svn/trunk</datadir>
+                <info compressed="true">http://xbmc-repo-agx.googlecode.com/git/addons.xml</info>
+                <checksum>http://xbmc-repo-agx.googlecode.com/git/addons.xml.md5</checksum>
+                <datadir zip="true">http://xbmc-repo-agx.googlecode.com/git</datadir>
         </extension>
         <extension point="xbmc.addon.metadata">
-                <summary>XBMC Addons for Adults Only</summary>
-                <description>This repository contains addons that are for adults only. You may only view the contents of this repository if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this content.</description>
+                <summary>XBMC Addons by agx</summary>
+                <description>While I wanted to just have my addon included in the XBMC-Adult repo, the owner never responded to my requests, so here is yet-another-xbmc-repo.  Currently hosts the Pridetube (Adult/Gay) addon only.  Perhaps I'll write more addons in the future.</description>
                 <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
                 <platform>all</platform>
         </extension>
 </addon>
 
 <addon id="plugin.video.pridetube"
-       name="Pridetube (Adult)"
+       name="Pridetube (Adult/Gay)"
        version="1.0.7"
        provider-name="antigenx; based on Lubetube by flip387">
   <requires>
