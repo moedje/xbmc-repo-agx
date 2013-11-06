@@ -16,7 +16,7 @@
 
 <addon id="plugin.video.pridetube"
        name="Pridetube (Adult/Gay)"
-       version="1.0.7"
+       version="1.0.8"
        provider-name="antigenx; based on Lubetube by flip387">
   <requires>
     <import addon="xbmc.python" version="2.1"/>
