@@ -19,7 +19,7 @@
        version="1.0.7"
        provider-name="antigenx; based on Lubetube by flip387">
   <requires>
-    <import addon="xbmc.python" version="2.0"/>
+    <import addon="xbmc.python" version="2.1"/>
     <import addon="script.module.beautifulsoup" version="3.0.8"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
