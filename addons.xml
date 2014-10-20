@@ -4,7 +4,7 @@
         <extension point="xbmc.addon.repository" name="agx's XBMC Repo">
                 <info compressed="false">http://xbmc-repo-agx.googlecode.com/git/addons.xml</info>
                 <checksum>http://xbmc-repo-agx.googlecode.com/git/addons.xml.md5</checksum>
-                <datadir zip="false">http://xbmc-repo-agx.googlecode.com/git</datadir>
+                <datadir zip="true">http://xbmc-repo-agx.googlecode.com/git</datadir>
         </extension>
         <extension point="xbmc.addon.metadata">
                 <summary>XBMC Addons by agx</summary>
