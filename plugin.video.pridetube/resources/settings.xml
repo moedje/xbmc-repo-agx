@@ -1,4 +1,0 @@
-<settings>
-   <setting id="hd" type="bool" label="30000" default="false"/>
-   <setting id="full_scene" type="bool" label="30001" default="false"/>
-</settings>
