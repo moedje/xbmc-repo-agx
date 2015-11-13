@@ -32,4 +32,23 @@
     <platform>all</platform>
   </extension>
 </addon>
+
+<addon id="plugin.video.gayboystube"
+       name="GayBoysTube"
+       version="0.0.1"
+       provider-name="antigenx">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.0.8"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="addon.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Watch videos from gayboystube.com</summary>
+    <description>Amateur and professional gay porn.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
 </addons>
