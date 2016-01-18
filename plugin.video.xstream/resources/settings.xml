@@ -1,0 +1,60 @@
+<settings>
+	<category label="General">
+		<setting id="Combine Page Results" label="combinepages" values="true" default="true" type="bool" visible="true" />
+		<setting id="lastsearch" label="Last Search" values="gay" default="" type="text"  visible="true"  />
+		<setting id="sortby" label="Sort Method" values="recent" default="recent" type="text" visible="true" />
+	</category>
+    <category label="30021">       
+        <!--<setting default="false" id="debug" label="30000" type="bool" />-->
+        <setting default="lastpost" id="sortorder" label="Sort Order" type="labelenum" values="lastpost|dateline|replycount|views|title|voteavg" /> 
+        <setting default="false" id="autoPlay" label="30005" type="bool" />
+        <setting default="100" id="maxHoster" label="maximale Laenge Hosterliste" type="number" />
+        <setting default="false" id="hosterListFolder" label="30007" type="bool" enable="eq(-2,false)"/>
+        <setting default="true" id="presortHoster" label="30009" type="bool" enable="eq(-3,false)"/>
+        <setting default="2" id="prefLanguage" label="30002" type="enum" values="ger|eng|all" />
+        <setting default="false" id="metahandler" label="30004" type="bool" />
+        <setting default="false" id="metaOverwrite" label="30008" type="bool" enable="!eq(-1,false)" />
+        <setting default="600" id="cacheTime" label="30006" type="number" />
+        <setting default="true" id="showAdult" label="30003" type="bool" />
+        <setting type="sep" />
+    </category> 
+    <category label="30022">       
+        <setting default="false" id="plugin_bundesliga_de" label="Bundesliga.de" type="bool" />
+        <setting default="false" id="plugin_burning_series_org" label="Burning-Seri.es" type="bool" />
+        <setting default="true" id="plugin_gstream_in" label="G-Stream.in" type="bool" />
+        <setting default="" id="gstream_in-username" label="Benutzername" type="text" />
+        <setting default="" id="gstream_in-password" label="Passwort" type="text" option="hidden" />
+        <setting default="false" id="plugin_kinoleak" label="KinoLeak.tv" type="bool" />
+        <setting default="false" id="plugin_kinox_to" label="Kinox.to" type="bool" />
+        <setting default="kinox.to" enable="!eq(-1,false)" id="kinox_to-domain" label="Kinox domain" type="labelenum" values="kinox.to|kinox.me|kinox.tv" />
+        <setting default="false" id="plugin_kkiste_to" label="KKiste.to" type="bool" />
+        <setting default="false" id="plugin_movie4k_to" label="Movie4k.to" type="bool" />
+        <setting default="movie4k.to" enable="!eq(-1,false)" id="movie4k_to-domain" label="Movie4k domain" type="labelenum" values="movie4k.to|movie4k.me|movie4k.tv" />
+        <setting default="false" id="plugin_moviesever_com" label="MoviesEver.com" type="bool" />
+        <setting default="false" id="plugin_seriesever_net" label="SeriesEver.net" type="bool" />
+        <setting type="sep" />
+    </category>
+    <category label="Views">
+        <setting default="false" id="auto-view" label="automatische Views aktivieren" type="bool" />
+        <setting default="503" enable="!eq(-1,false)" id="movies-view" label="Film-View" type="number" />
+        <setting default="503" enable="!eq(-2,false)" id="tvshows-view" label="Serien-View" type="number" />
+        <setting default="504" enable="!eq(-3,false)" id="seasons-view" label="Staffel-View" type="number" />
+        <setting default="504" enable="!eq(-4,false)" id="episodes-view" label="Episoden-View" type="number" />
+    </category>
+    <category label="30024">
+        <setting label="30080" type="sep" />
+        <setting id="download-folder" type="folder" label="30081" default=""/>
+        <setting label="30070" type="sep" />
+        <setting default="false" id="jd_enabled" label="30071" type="bool" />
+        <setting default="127.0.0.1" enable="!eq(-1,false)" id="jd_host" label="30072" type="text" />
+        <setting default="10025" enable="!eq(-2,false)" id="jd_port" label="30073" type="text" />
+        <setting default="true" enable="!eq(-3,false)" id="jd_automatic_start" label="30074" type="bool" />
+        <setting default="false" enable="!eq(-4,false)" id="jd_grabber" label="30075" type="bool" />
+        <setting type="sep" />
+        <setting default="false" id="pyload_enabled" label="30082" type="bool" />
+        <setting default="127.0.0.1" enable="!eq(-1,false)" id="pyload_host" label="30072" type="text" />
+        <setting default="8000" enable="!eq(-2,false)" id="pyload_port" label="30073" type="number" />
+        <setting default="user" enable="!eq(-3,false)" id="pyload_user" label="30083" type="text" />
+        <setting default="" enable="!eq(-4,false)" id="pyload_passwd" label="30084" type="text" option="hidden" />
+    </category> 
+</settings>

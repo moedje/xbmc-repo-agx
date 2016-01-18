@@ -1,0 +1,7 @@
+<settings>
+	<category label="General">
+		<setting id="Combine Page Results" label="combinepages" values="true" default="true" type="bool" visible="true" />
+		<setting id="lastsearch" label="Last Search" values="" default="" type="text"  visible="true"  />
+		<setting id="sortby" label="Sort Method" values="recent" default="recent" type="text" visible="true" />
+	</category>
+</settings>

@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="repository.xbmc-repo-agx" name="agx's XBMC Repo" version="1.0.3" provider-name="xbmc-repo-agx">
-        <extension point="xbmc.addon.repository" name="agx's XBMC Repo">
-                <info compressed="false">https://raw.githubusercontent.com/antigenx/xbmc-repo-agx/master/addons.xml</info>
-                <checksum>https://raw.githubusercontent.com/antigenx/xbmc-repo-agx/master/addons.xml.md5</checksum>
-                <datadir zip="true">https://raw.githubusercontent.com/antigenx/xbmc-repo-agx/master/</datadir>
-        </extension>
-        <extension point="xbmc.addon.metadata">
-                <summary>XBMC Addons by agx</summary>
-                <description>Addons by antigenx.</description>
-                <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
-                <platform>all</platform>
-        </extension>
+<addon id="plugin.video.dagay"
+       name="DaGay"
+       version="1.1.2"
+       provider-name="moedje">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Dagay.com/Deviantclip Porn Videos (Adult 18+)</summary>
+        <description>DaGay has Gay Porn or Deviantclip has Str8 set which you want in settings. Modified from the
+            plugin.video.dclip will combine the 6 pages of video results into one result screen and set Thumbs view
+        </description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.dclip"
+	   name="Dclip"
+	   version="1.0.2"
+	   provider-name=" ">
+  <extension point="xbmc.python.pluginsource"
+			 library="default.py">
+    	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Adult(18+) videos from Deviantclip.com</summary>
+    <description>Adult(18+) videos from Deviantclip.com</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.gayboystube"
+       name="GayBoysTube"
+       version="0.0.2"
+       provider-name="moedje">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Watch videos from gayboystube.com</summary>
+        <description>Amateur and professional gay porn.forked: antigenx adding categories search still bugs
+        </description>
+        <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="plugin.video.gaypornium"
@@ -33,22 +73,71 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.gayboystube"
-       name="GayBoysTube"
-       version="0.0.1"
-       provider-name="antigenx">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.0.8"/>
-  </requires>
+<addon id="plugin.video.largecamtube"
+	   name="largecamtube"
+	   version="1.2.0"
+	   provider-name="moedje forked pcd">
   <extension point="xbmc.python.pluginsource"
-            library="addon.py">
-        <provides>video</provides>
+			 library="default.py">
+    	<provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Watch videos from gayboystube.com</summary>
-    <description>Amateur and professional gay porn.</description>
+    <summary>Adult(18+) Gay videos from largecamtube.com</summary>
+    <description>Adult(18+) videos from largecamtube.com</description>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="plugin.video.oxo"
+	   name="Oxo"
+	   version="1.2.1"
+	   provider-name="moedje forked pcd@xtrend-alliance">
+  <extension point="xbmc.python.pluginsource"
+			 library="default.py">
+    	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Adult(18+) videos from OxoTube.co</summary>
+    <description>Adult(18+) videos from OxoTube.com</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.xstream"
+	name="xStream"
+	version="2.2.69"
+	provider-name="moedje (originator:Lynx187, murphy, MaxMustermann)">
+  <requires>
+    <import addon="xbmc.python"                 version="2.1.0"/>
+    <import addon="script.module.urlresolver"   version="2.9.0"/>
+    <import addon="script.module.metahandler"   version="1.0.0"/>
+    <import addon="script.module.mechanize"     version="0.2.6"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">xStream Gay</summary>
+    <description lang="de">xStream modified GSTREAM plugin to focus on gay porn and filtering out the shemale from the gay section and adding larger pagination and word filtering, 200 results per page now. Little was done by me thanks to all the original authors. ist ein Addon, welches mit eigenen Plugins erweitert werden kann. Hiermit kann man Filme, Serien, etc. per Stream anschauen.[CR]Support: http://xstream-addon.square7.ch </description>
+    <summary lang="en">xStream</summary>
+    <description lang="en">xStream modified GSTREAM plugin to focus on gay porn and filtering out the shemale from the gay section and adding larger pagination and word filtering, 200 results per page now. Little was done by me thanks to all the original authors. Addon to watch streams from various film an series sites.[CR]Support: http://xstream-addon.square7.ch</description>
+    <forum>http://xstream-addon.square7.ch</forum>
+    <website>http://xstream-addon.square7.ch</website>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.xbmc-repo-agx" name="agx's XBMC Repo" version="1.0.3" provider-name="xbmc-repo-agx">
+        <extension point="xbmc.addon.repository" name="agx's XBMC Repo">
+                <info compressed="false">https://raw.githubusercontent.com/antigenx/xbmc-repo-agx/master/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/antigenx/xbmc-repo-agx/master/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/antigenx/xbmc-repo-agx/master/</datadir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+                <summary>XBMC Addons by agx</summary>
+                <description>Addons by antigenx.</description>
+                <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+                <platform>all</platform>
+        </extension>
 </addon>
 </addons>

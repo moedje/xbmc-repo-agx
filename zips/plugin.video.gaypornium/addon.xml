@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.gaypornium"
+       name="Gaypornium"
+       version="0.0.1"
+       provider-name="antigenx">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.0.8"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="addon.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Watch videos from gaypornium.com</summary>
+    <description>Amateur and professional gay porn.</description>
+    <platform>all</platform>
+  </extension>
+</addon>

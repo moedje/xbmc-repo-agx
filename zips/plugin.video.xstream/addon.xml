@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.xstream"
+	name="xStream"
+	version="2.2.69"
+	provider-name="moedje (originator:Lynx187, murphy, MaxMustermann)">
+  <requires>
+    <import addon="xbmc.python"                 version="2.1.0"/>
+    <import addon="script.module.urlresolver"   version="2.9.0"/>
+    <import addon="script.module.metahandler"   version="1.0.0"/>
+    <import addon="script.module.mechanize"     version="0.2.6"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">xStream Gay</summary>
+    <description lang="de">xStream modified GSTREAM plugin to focus on gay porn and filtering out the shemale from the gay section and adding larger pagination and word filtering, 200 results per page now. Little was done by me thanks to all the original authors. ist ein Addon, welches mit eigenen Plugins erweitert werden kann. Hiermit kann man Filme, Serien, etc. per Stream anschauen.[CR]Support: http://xstream-addon.square7.ch </description>
+    <summary lang="en">xStream</summary>
+    <description lang="en">xStream modified GSTREAM plugin to focus on gay porn and filtering out the shemale from the gay section and adding larger pagination and word filtering, 200 results per page now. Little was done by me thanks to all the original authors. Addon to watch streams from various film an series sites.[CR]Support: http://xstream-addon.square7.ch</description>
+    <forum>http://xstream-addon.square7.ch</forum>
+    <website>http://xstream-addon.square7.ch</website>
+    <platform>all</platform>
+  </extension>
+</addon>

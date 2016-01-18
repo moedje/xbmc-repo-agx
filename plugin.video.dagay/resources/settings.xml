@@ -1,0 +1,9 @@
+<settings>
+	<category label="General">
+		<setting id="dopaginate" label="Paginate Videos" values="false" default="false" type="bool" visible="true" />
+		<setting id="lastsearch" label="Last Search" values="" default="" type="text"  visible="true"  />
+		<setting id="sortby" label="Sort Method" values="recent|rated|viewed|popular|editorchoice|longest" default="recent" type="labelenum" visible="true" />
+        <setting id="viewmode" label="Set View to: $INFO[Container.Viewmode]" values="500" default="500" type="number" visible="true" />
+		<setting id="hostname" label="Hostname" values="http://www.dagay.com|http://www.deviantclip.com" default="http://www.dagay.com" type="labelenum" visible="true" />
+	</category>
+</settings>

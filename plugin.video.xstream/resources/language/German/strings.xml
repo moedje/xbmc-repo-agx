@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+        <!-- general begin by 30000 - 30050 -->
+        <string id="30000">Debug-Modus</string>
+        <string id="30001">Videoplayer</string>
+        <string id="30002">bevorzugte Sprache</string>
+        <string id="30003">zeige XXX Sektionen (Sie müssen volljährig sein)</string>
+        <string id="30004">Metahandler benutzen</string>
+        <string id="30005">Hoster automatisch wählen</string>
+        <string id="30006">Cachezeit für Webseiten (Sekunden)</string>
+        <string id="30007">zeige Hosterliste als Verzeichnis</string>
+        <string id="30008">Metahandler ersetzt Infos von Site</string>
+        <string id="30009">Hosterliste prüfen und sortieren (langsam auf schwachen Systemen)</string>
+
+        <!-- settingtabs begin by 30021 - 30030 -->
+        <string id="30021">Allgemein</string>
+        <string id="30022">Site-Plugins</string>
+        <string id="30023">JDownloader Einstellungen</string>
+        <string id="30024">Downloads</string>
+
+        <!-- Downloads begin by 30071 - 30086 -->
+        <string id="30070">JDownloader</string>
+        <string id="30071">JDownloader an/aus</string>
+        <string id="30072">Host</string>
+        <string id="30073">Port</string>
+        <string id="30074">Download automatisch starten</string>
+        <string id="30075">Sende nur an LinkGrabber</string>
+        <string id="30080">XBMC-Download</string>
+        <string id="30081">Download-Verzeichnis</string>
+        <string id="30082">PyLoad an/aus</string>
+        <string id="30083">Benutzername</string>
+        <string id="30084">Passwort</string>
+  
+  
+        <string id="30302">Staffeln Deutsch</string>
+        <string id="30303">Staffeln Englisch</string>
+        <string id="30304">Suche</string>
+        <string id="30305">Staffel %s</string>
+        <string id="30306">%s bis %s Sekunde</string>
+        <string id="30307">alle abspielen</string>
+        <string id="30308">Wartezeit</string>
+        <string id="30309">Bitte warte %s Sekunden</string>
+
+        <string id="30402">Laender</string>
+</strings>
+

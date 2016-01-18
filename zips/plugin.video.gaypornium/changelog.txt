@@ -1,0 +1,3 @@
+v0.0.1
+
+Initial version adapted from Pridetube addon, stripped and made bare, reshaped according to Kodi addon coding standards (sort-of)
