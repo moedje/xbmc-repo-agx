@@ -177,11 +177,8 @@ def makeListItem(itemname, runmode, webpageurl, pic="DefaultFolder.png", folder=
     pathurl = sys.argv[0] + '?' + urllib.urlencode(itemproperties)
     li = xbmcgui.ListItem(label=itemname, label2=runmode, iconImage=pic, thumbnailImage=pic, path=webpageurl.replace(base_url,""))
     li.setProperty(key=url, value=webpageurl)
-    for k,v in itemproperties:
-        li.setProperty(key=k, value=v)
-    if not folder:
-        li.setInfo(type='Video', infoLabels=itemproperties)
-    litem = pathurl, li, folder
+    li.setInfo(type='Video', infoLabels=itemproperties)
+    litem = pathurl, li, folder,
     return litem
 
 def addItems(itemslist=[], isend=False):
@@ -191,16 +188,25 @@ def addItems(itemslist=[], isend=False):
     return xbmcplugin.addDirectoryItems(handle=int(sys.argv[1]), items=itemslist, totalItems=len(itemslist))
 
 def scrapeVideos(fullurl):
+    curpagenum = "2"
+    npage = int(str(fullurl.split('/page', 1)[1]).replace('.html', ''))
+    try:
+        if npage is not None:
+            if npage > 1:
+                curpagenum = str(npage + 1)
+    except:
+        curpagenum = "2"
     urlofpage = str(fullurl.split('/page', 1)[0]) + '/page{0}.html'
-    link = getUrl(urlofpage.format('1'))
+    link = getUrl(urlofpage.format(npage))
     match = re.compile(ur'this.src="(?P<thumbnail>http://cdn.gayboystube.com/thumbs/[A-Z0-9a-z/. -_]*[wmvaiflp4]{3}-[0-9].jpg)";\' width="[0-9]{3}" height="[0-9]{3}" alt="(?P<name>[A-Za-z0-9!-@#$%^&*(),.;:\' ]*)" />\r\n\r\n\t\t\t</a>\r\n\r\n\t<a href="http://www.gayboystube.com/(?P<url>video/[0-9]{5,7}/[0-9a-z-]*)" class="title"', re.UNICODE).findall(link)
     for thumbnail, name, url in match:
         addListItem(name, str(base_url + url), 'playVideo', thumbnail, page="page"+str(npage)+".html")
     match2 = re.search('<a href=\'(?P<pge>page[0-9]{1,5}\.html)\' class="next">Next</a>', link)
+    npagenum = ""
     if match2 is not None:
         npagenum = str(match2.group('pge'))
         addListItem('Go to next page ({0})'.format(str(npagenum)), fullurl, 'scrapeVideoList', 'DefaultFolder.png', npagenum)
-    addListItem('Next', fullurl, 'scrapeVideoList', 'DefaultFolder.png', npagenum)
+    addListItem('Next', fullurl, 'scrapeVideoList', 'DefaultFolder.png', str(curpagenum))
     setView(False)
 
 def playVideo(vurl, name, thumb):
@@ -270,6 +276,17 @@ def unescapeString(text):
     pass3 = unescapeXML(pass2)
     return pass3
 
+def parameters_string_to_dict(parameters):
+    ''' Convert parameters encoded in a URL to a dict. '''
+    paramDict = {}
+    if parameters:
+        paramPairs = parameters[1:].split("&")
+        for paramsPair in paramPairs:
+            paramSplits = paramsPair.split('=')
+            if (len(paramSplits)) == 2:
+                paramDict[paramSplits[0]] = unescapeString(paramSplits[1])
+    return paramDict
+
 # initialize variables
 url = None
 name = None
@@ -277,35 +294,49 @@ thumb = None
 mode = None
 page = None
 
-params = get_params()
 try:
-    url = unescapeString(params['url'])
+    params = parameters_string_to_dict(sys.argv[2])
+    name = unescapeString(str(params.get("name", "")))
+    url = unescapeString(str(params.get("url", "")))
+    mode = str(params.get("mode", ""))
+    thumb = str(params.get("thumb", "DefaultFolder.png"))
+    page = str(params.get("page", "1"))
 except:
-    url = unquote_plus(params['url'])
-try:
-    #name = urllib.unquote_plus(params["name"])
-    name = unescapeString(str(params['name']).title())
-except:
-    name = str(params['name'])
-try:
-    thumb = unescapeXML(params['thumb'])
-except:
-    thumb = urllib.unquote_plus(params['thumb'])
-try:
-    mode = unescapeString(str(params['mode']))
-except:
-    mode = urllib.unquote_plus(params["mode"])
+    params = get_params()
     try:
-        if mode is None:
-            mode = str(params['mode'])
-        if len(mode) < 1:
-            mode = str(params['mode'])
+        try:
+            url = unescapeString(params[url])
+        except:
+            url = unquote_plus(params[url])
+        try:
+            #name = urllib.unquote_plus(params["name"])
+            name = unescapeString(str(params[name]).title())
+        except:
+            name = str(params[name])
+        try:
+            thumb = unescapeString(params[thumb])
+        except:
+            thumb = urllib.unquote_plus(params[thumb])
+        try:
+            mode = unescapeString(str(params[mode]))
+        except:
+            mode = urllib.unquote_plus(params[mode])
+        try:
+            if mode is None:
+                mode = str(params[mode])
+            if len(mode) < 1:
+                mode = str(params[mode])
+        except:
+            pass
+        try:
+            page = str(params['page'])
+        except:
+            page = urllib.unquote_plus(params["page"])
     except:
-        pass
-try:
-    page = str(params['page'])
-except:
-    page = urllib.unquote_plus(params["page"])
+        try:
+            params = urllib2.parse_keqv_list(sys.argv[2])
+        except:
+            displayRootMenu()
 
 if mode == None or url == None or len(url) < 1:
     displayRootMenu()
@@ -314,10 +345,10 @@ elif mode == 'loadVideoList':
 elif mode == 'scrapeVideoListCat':
     indexCatVideos(url, name)
 elif mode == 'scrapeVideoList':
-    indexVideos(urlpath=basejoin(base_url, str(url +'/'+ page)), page="{0} {1}".format(name, page))
+    indexVideos(urlpath=basejoin(base_url, str(url +'/'+ page)), page="page{0}".format(page))
 elif mode == 'playVideo':
     playVideo(url, name, thumb)
 
-setView(True)
+#setView(True)
 #xbmcplugin.endOfDirectory(int(sys.argv[1]))
 #xbmc.executebuiltin("Container.SetViewMode({0})".format(viewMode))
