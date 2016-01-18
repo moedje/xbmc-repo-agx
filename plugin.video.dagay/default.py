@@ -261,7 +261,7 @@ def parameters_string_to_dict(parameters):
     return paramDict
 
 params = parameters_string_to_dict(sys.argv[2])
-name = str(params.get("name", ""))
+name = unescapeString(str(params.get("name", "")))
 url = unescapeString(str(params.get("url", "")))
 mode = str(params.get("mode", ""))
 

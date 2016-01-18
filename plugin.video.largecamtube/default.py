@@ -156,7 +156,10 @@ def getVideos(name1, urlmain, enddir=True):
     match = re.compile(regexvideo, re.DOTALL).findall(content)
     smatches = []
     matches, smatches = getGayMatch(match)
-    for url, pic, name in matches:
+    for url, pic, nameof in matches:
+        name = nameof.replace("[Cr]","[CR]")
+        name = name.replace("[Color Red","[COLOR RED")
+        name = name.replace("[/Color","[/COLOR")
         addDirectoryItem(name, {"name": name, "url": url, "mode": 3}, pic)
     if enddir:
         setView()
